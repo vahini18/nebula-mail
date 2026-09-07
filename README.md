@@ -233,18 +233,3 @@ This video demonstrates the AI assistant understanding natural-language commands
 - Deploy the application for public demonstration.
 
 ---
-
-## 👩‍💻 Developer
-
-**Vahini M**
-
-B.E. Computer Science and Engineering  
-Sri Ramakrishna Engineering College
-
-GitHub: https://github.com/vahini18
-
----
-
-### 📌 Developed for
-
-**Nebula KnowLab 2027 Batch Hiring Task**
