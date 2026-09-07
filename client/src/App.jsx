@@ -5,6 +5,9 @@ const API = "http://localhost:5000";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("nebula-dark-mode") === "true";
+  });
   const [emails, setEmails] = useState([]);
   const [currentFolder, setCurrentFolder] = useState("INBOX");
   const [currentQuery, setCurrentQuery] = useState("");
@@ -32,6 +35,10 @@ function App() {
   useEffect(() => {
     checkAuth();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("nebula-dark-mode", darkMode);
+  }, [darkMode]);
 
   useEffect(() => {
     if (!authenticated) return;
@@ -424,7 +431,15 @@ function App() {
 
   if (!authenticated && !loading) {
     return (
-      <div className="login-page">
+      <div className={`login-page ${darkMode ? "dark-login" : ""}`}>
+        <button
+          className="login-theme-button"
+          onClick={() => setDarkMode((prev) => !prev)}
+          title={darkMode ? "Light mode" : "Dark mode"}
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
         <div className="login-card">
           <div className="logo">✉️</div>
           <h1>Nebula Mail</h1>
@@ -452,7 +467,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
       {/* SIDEBAR */}
       <aside className="sidebar">
         <div className="brand">
@@ -510,6 +525,14 @@ function App() {
           </div>
 
           <div className="header-actions">
+            <button
+              className="theme-button"
+              onClick={() => setDarkMode((prev) => !prev)}
+              title={darkMode ? "Light mode" : "Dark mode"}
+            >
+              {darkMode ? "☀️" : "🌙"}
+            </button>
+
             <button
               className="refresh-button"
               onClick={() => fetchEmails(currentFolder, currentQuery)}
