@@ -779,7 +779,6 @@ function App() {
               >
                 {sending ? "Sending..." : "Send ✈️"}
               </button>
-
               <button
                 className="discard-button"
                 onClick={closeCompose}
@@ -793,6 +792,5 @@ function App() {
       )}
     </div>
   );
-}
-
+} 
 export default App;
