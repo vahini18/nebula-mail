@@ -205,35 +205,19 @@ Then open the frontend and sign in using Google.
 
 ---
 
-## 🎥 Screenshots / Demo
-
-The following screenshots demonstrate the AI assistant controlling the mail interface:
-
-### AI Email Compose
-
-> Screenshot showing the AI command filling the recipient, subject, and email body.
-
-### AI Email Search & Filtering
-
-> Screenshot showing the assistant filtering emails based on a natural-language command.
-
-### AI-Powered Reply
-
-> Screenshot showing the assistant preparing a contextual reply to the currently opened email.
-
-### Email Synchronization
-
-> Screenshot showing a newly received email appearing automatically without manually refreshing the page.
-
-A short video demonstration can also be included here showing the complete flow from AI command → UI action → Gmail operation.
-
----
-
 ## 🔐 Security
 
 API keys, OAuth credentials, and environment variables are stored locally and excluded from the public repository.
 
 Sensitive credentials are never committed to GitHub.
+
+---
+
+## 🎥 Demo Video
+
+This video demonstrates the AI assistant understanding natural-language commands and controlling the mail web application UI.
+
+[▶️ Watch the Demo Video](https://drive.google.com/file/d/1Jbidw-X9u1UpE8TVGjGJcvCoWcxSCYgh/view?usp=sharing)
 
 ---
 
